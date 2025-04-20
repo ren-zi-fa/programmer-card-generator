@@ -93,8 +93,9 @@ function App() {
   const downloadFromDataURL = async (url: string) => {
     const link = document.createElement("a");
     link.href = url;
-    link.download = `preview-download.png`;
+    link.download = `kartu-${dataAnggota?.nama_lengkap}.png`;
     link.click();
+    
   };
 
   return (
@@ -265,7 +266,9 @@ function App() {
       <div className="mt-0 lg:mt-10 flex items-center gap-4">
         <select
           value={downloadFormat}
-          onChange={(e) => setDownloadFormat(e.target.value as any)}
+          onChange={(e) =>
+            setDownloadFormat(e.target.value as "png" | "jpg" | "pdf")
+          }
           className="border border-gray-400 p-2 rounded text-black"
         >
           <option value="png">PNG</option>
@@ -301,7 +304,7 @@ function App() {
                   setIsOpen(false);
                   setPreviewURL(null);
                   setImagePreview(null);
-                  setDataAnggota(undefined);
+
 
                   setIsScreenshot(false);
                 }}
