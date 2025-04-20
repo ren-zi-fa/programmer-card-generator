@@ -1,0 +1,15 @@
+.card-berlaku {
+  background-color: #facc15;
+  color: #1e3a8a;
+  border-radius: 0 0 4px 4px;
+
+}
+
+.card-anggota {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+
+
+}

@@ -1,0 +1,10 @@
+@import "tailwindcss";
+body {
+  line-height: initial !important;
+}
+
+@layer base {
+  img {
+    @apply inline-block;
+  }
+}
